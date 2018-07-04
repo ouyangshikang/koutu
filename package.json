@@ -1,0 +1,22 @@
+{
+  "name": "parcel-vue",
+  "version": "1.0.0",
+  "main": "main.js",
+  "license": "MIT",
+  "author": "白陀",
+  "scripts": {
+    "dev": "parcel index.html --open -p 8888",
+    "build": "parcel build index.html --public-url /"
+  },
+  "dependencies": {
+    "pixi.js": "^4.8.1",
+    "vue": "^2.5.16",
+    "vue-router": "^3.0.1"
+  },
+  "devDependencies": {
+    "@vue/component-compiler-utils": "^2.0.0",
+    "parcel-bundler": "^1.7.0",
+    "vue-hot-reload-api": "^2.3.0",
+    "vue-template-compiler": "^2.5.16"
+  }
+}
