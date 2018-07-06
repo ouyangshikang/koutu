@@ -9,6 +9,7 @@
     "build": "parcel build index.html --public-url /"
   },
   "dependencies": {
+    "fabric": "^2.3.3",
     "pixi.js": "^4.8.1",
     "vue": "^2.5.16",
     "vue-router": "^3.0.1"
