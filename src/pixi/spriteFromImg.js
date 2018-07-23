@@ -1,8 +1,3 @@
-<template>
-
-</template>
-
-<script>
 /* 改变图片精灵的大小，位置，比例，旋转 */
 import * as PIXI from 'pixi.js'
 // alias
@@ -41,11 +36,3 @@ function setup () {
   let rocket = new Sprite(texture);
   app.stage.addChild(rocket)
 }
-export default {
-
-}
-</script>
-
-<style lang="scss">
-
-</style>

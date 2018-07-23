@@ -1,9 +1,5 @@
-<template>
 
-</template>
-
-<script>
-/* 监视文件被加载的进程 */
+/* 改变图片精灵的大小，位置，比例，旋转 */
 import * as PIXI from 'pixi.js'
 
 // alias
@@ -30,7 +26,6 @@ loader
 	.add([
 		require("/assets/1.jpg"),
 		require("/assets/2.jpg"),
-		require("/assets/3.jpg"),
 	])
 	.on('progress', loadProgressHandler)
 	.load(setup)
@@ -39,23 +34,22 @@ function setup() {
 	console.log('all file loaded')
   let sprite1 = new Sprite(resources[require("/assets/1.jpg")].texture)
   let sprite2 = new Sprite(resources[require("/assets/2.jpg")].texture)
-  let sprite3 = new Sprite(resources[require("/assets/3.jpg")].texture)
   app.stage.addChild(sprite1)
   app.stage.addChild(sprite2)
-	app.stage.addChild(sprite3)
 	// Position the sprites
-	sprite2.position.set(100, 100)
-	sprite3.position.set(200, 200)
+	sprite2.x = 100
+  sprite2.y = 100
+  sprite2.width = 100
+  sprite2.height = 100
+  // sprite2.scale.x = 2
+  // sprite2.scale.y = 2  // sprite2.scale.set(2, 2);
+  // 改变精灵旋转的锚点
+  sprite2.anchor.set(1, 0)
+  sprite2.rotation = 0
+
 }
 function loadProgressHandler (loader, resource) {
 	console.log('loading:', resource.name)
 	console.log('progress: ' + loader.progress + '%'); 
 }
-export default {
 
-}
-</script>
-
-<style lang="scss">
-
-</style>
